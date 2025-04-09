@@ -1,1 +1,32 @@
+## GOAL
+Your task will be to reconstruct the 3D scene from many different views. Means,
+your work could be the key to unlocking mapping the world from assorted and noisy data
+sources, such as images uploaded by users to services like Google Maps.
+
+## CONTEXT
+
+Your best camera may just be the phone in your pocket. You might take a snap of a landmark,
+then share it with friends. By itself, that photo is two-dimensional and only includes the 
+perspective of your shooting location. Of course, many people may have taken photos of that 
+same landmark. If we were able to combine all of our photos, we may be able to create a more 
+complete, three-dimensional view of any given thing. Perhaps machine learning could help better c
+apture the richness of the world using the vast amounts of unstructured image collections freely 
+available on the internet.
+
+The process of reconstructing a 3D model of an environment from a collection of images is called Structure
+from Motion (SfM). These images are often captured by trained operators or with additional 
+sensor data, such as the cars used by Google Maps. This ensures homogeneous, high-quality 
+data. It is much more difficult to build 3D models from assorted images, given a wide variety
+of viewpoints, along with lighting, weather, and other changes.
+
+## EVALUATION 
+
+Evaluation metric
+Participants are asked to estimate the pose for each image in a set with N images. Each camera 
+pose is parameterized with a rotation matrix Rand a translation vector T, from an arbitrary frame of reference.
+
+Submissions are evaluated on the mean Average Accuracy (mAA) of the estimated poses. Given a set of cameras, parameterized
+by their rotation matrices and translation vectors, and the hidden ground truth, we compute
+the relative error in terms of rotation (ϵR, in degrees) and translation (ϵT, in meters) for every possible pair of 
+images in N, that is, (nC2) pairs.
 
