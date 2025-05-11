@@ -56,16 +56,16 @@ Let a pixel be at position \((x, y)\) relative to the center \((cx, cy)\):
 
 ### 📌 Example with `k = 1`
 
-Point: \((x, y) = (0.5, 0.5)\)  
-\[
-r^2 = 0.5^2 + 0.5^2 = 0.5
-\]
+Point: `(x, y) = (0.5, 0.5)`
 
-Then:
-\[
-x_{\text{distorted}} = 0.5 \cdot (1 + 1 \cdot 0.5) = 0.75 \\
-y_{\text{distorted}} = 0.5 \cdot (1 + 1 \cdot 0.5) = 0.75
-\]
+Compute radial distance:
+
+`r² = 0.5² + 0.5² = 0.25 + 0.25 = 0.5`
+
+Apply distortion:
+
+- `x_distorted = 0.5 * (1 + 1 * 0.5) = 0.5 * 1.5 = 0.75`
+- `y_distorted = 0.5 * (1 + 1 * 0.5) = 0.5 * 1.5 = 0.75`
 
 ➡️ This pushes the pixel **away from the center**, simulating a **"bulging" image**.
 
