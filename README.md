@@ -25,8 +25,27 @@ Different camera models in COLMAP expect different parameter sets:
 - `p1`, `p2`: **tangential distortion coefficients**
 
 To disable distortion, set coefficients to `0`. For example:
+### 📐 Mathematical Model
 
-param_array = np.array([fx, fy, cx, cy, 0., 0., 0., 0.])  # Ideal lens
+Let a pixel be at position `(x, y)` relative to the center `(cx, cy)`.
+
+#### Normalize the distance from the center:
+
+`r² = x² + y²`
+
+#### Apply radial distortion:
+
+- `x_distorted = x * (1 + k * r²)`
+- `y_distorted = y * (1 + k * r²)`
+
+This simulates how the pixels are distorted based on their distance from the center and the distortion coefficient `k`.
+
+---
+
+To simulate an **ideal lens** (no distortion), use the following parameters:
+
+
+param_array = np.array([fx, fy, cx, cy, 0., 0., 0., 0.])  # Ideal lens (no distortion)
 
 ## 🔍 Understanding Radial Distortion (`k` in `simple-radial`)
 
