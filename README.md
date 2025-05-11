@@ -26,7 +26,6 @@ Different camera models in COLMAP expect different parameter sets:
 
 To disable distortion, set coefficients to `0`. For example:
 
-```python
 param_array = np.array([fx, fy, cx, cy, 0., 0., 0., 0.])  # Ideal lens
 
 ## 🔍 Understanding Radial Distortion (`k` in `simple-radial`)
@@ -88,3 +87,5 @@ COLMAP uses these parameters to:
 - ✅ Accurately **reconstruct 3D geometry**
 - 🔄 **Undistort** images for better feature matching
 - 🎯 Simulate realistic **camera projection** and image formation
+
+```python
