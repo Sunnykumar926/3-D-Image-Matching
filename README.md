@@ -56,23 +56,6 @@ Radial distortion bends straight lines due to lens curvature:
 
 ---
 
-### 📐 Mathematical Model
-
-Let a pixel be at position \((x, y)\) relative to the center \((cx, cy)\):
-
-1. **Normalize the distance** from the center:
-   \[
-   r^2 = x^2 + y^2
-   \]
-
-2. **Apply radial distortion**:
-   \[
-   x_{\text{distorted}} = x \cdot (1 + k \cdot r^2) \\
-   y_{\text{distorted}} = y \cdot (1 + k \cdot r^2)
-   \]
-
----
-
 ### 📌 Example with `k = 1`
 
 Point: `(x, y) = (0.5, 0.5)`
